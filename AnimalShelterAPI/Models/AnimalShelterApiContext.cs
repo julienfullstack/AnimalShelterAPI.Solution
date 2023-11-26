@@ -14,11 +14,11 @@ namespace AnimalShelterApi.Models
     {
       builder.Entity<Animal>()
         .HasData(
-          new Animal { AnimalId = 1, Name = "Matilda", Species = "Woolly Mammoth", Age = 7 },
-          new Animal { AnimalId = 2, Name = "Rexie", Species = "Dinosaur", Age = 10 },
-          new Animal { AnimalId = 3, Name = "Matilda", Species = "Dinosaur", Age = 2 },
-          new Animal { AnimalId = 4, Name = "Pip", Species = "Shark", Age = 4 },
-          new Animal { AnimalId = 5, Name = "Bartholomew", Species = "Dinosaur", Age = 22 }
+          new Animal { AnimalId = 1, Name = "Matilda", Species = "Cat", Age = 7 },
+          new Animal { AnimalId = 2, Name = "Rexie", Species = "Dog", Age = 10 },
+          new Animal { AnimalId = 3, Name = "Matilda", Species = "Dog", Age = 2 },
+          new Animal { AnimalId = 4, Name = "Pip", Species = "Cat", Age = 4 },
+          new Animal { AnimalId = 5, Name = "Bartholomew", Species = "Cat", Age = 3 }
         );
     }
   }
