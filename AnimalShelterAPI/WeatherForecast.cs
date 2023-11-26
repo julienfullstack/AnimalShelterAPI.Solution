@@ -1,6 +1,6 @@
 namespace AnimalShelterApi;
 
-public class WeatherForecast
+public class AnimalShelter
 {
     public DateTime Date { get; set; }
 
