@@ -112,5 +112,25 @@ namespace AnimalShelterApi.Controllers
 
       return NoContent();
     }
+
+    // GET: api/Animals/Random
+  [HttpGet("Random")]
+  public async Task<ActionResult<Animal>> GetRandomAnimal()
+  {
+    Random random = new Random();
+    int count = await _db.Animals.CountAsync();
+    int randomId = random.Next(1, count + 1);
+
+    Animal animal = await _db.Animals.FindAsync(randomId);
+
+    if (animal == null)
+    {
+      return NotFound();
+    }
+
+    return animal;
   }
+  
+  }
+  
 }
