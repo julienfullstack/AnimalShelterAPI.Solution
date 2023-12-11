@@ -6,6 +6,7 @@ namespace AnimalShelterApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [ApiVersion("1.0")]
   public class AnimalsController : ControllerBase
   {
     private readonly AnimalShelterApiContext _db;
@@ -17,6 +18,7 @@ namespace AnimalShelterApi.Controllers
 
     // GET api/animals
     [HttpGet]
+    [ApiVersion("1.0")]
     public async Task<List<Animal>> Get(string species, string name, int minimumAge)
     {
       IQueryable<Animal> query = _db.Animals.AsQueryable();
@@ -41,6 +43,7 @@ namespace AnimalShelterApi.Controllers
 
     // GET: api/Animals/5
     [HttpGet("{id}")]
+    [ApiVersion("1.0")]
     public async Task<ActionResult<Animal>> GetAnimal(int id)
     {
       Animal animal = await _db.Animals.FindAsync(id);
@@ -55,6 +58,7 @@ namespace AnimalShelterApi.Controllers
 
     // POST api/animals
     [HttpPost]
+    [ApiVersion("1.0")]
     public async Task<ActionResult<Animal>> Post([FromBody] Animal animal)
     {
       _db.Animals.Add(animal);
@@ -64,6 +68,7 @@ namespace AnimalShelterApi.Controllers
 
         // PUT: api/Animals/5
     [HttpPut("{id}")]
+    [ApiVersion("1.0")]
     public async Task<IActionResult> Put(int id, Animal animal)
     {
       if (id != animal.AnimalId)
@@ -99,6 +104,7 @@ namespace AnimalShelterApi.Controllers
 
     // DELETE: api/Animals/5
     [HttpDelete("{id}")]
+    [ApiVersion("1.0")]
     public async Task<IActionResult> DeleteAnimal(int id)
     {
       Animal animal = await _db.Animals.FindAsync(id);
@@ -115,6 +121,7 @@ namespace AnimalShelterApi.Controllers
 
     // GET: api/Animals/Random
   [HttpGet("Random")]
+  [ApiVersion("1.0")]
   public async Task<ActionResult<Animal>> GetRandomAnimal()
   {
     Random random = new Random();
@@ -130,6 +137,27 @@ namespace AnimalShelterApi.Controllers
 
     return animal;
   }
+
+    [Route("api/v{version:apiVersion}/StringList")]
+    [ApiVersion("1.0")]
+    [HttpGet]
+    public async Task<List<Animal>> GetV1(string species)
+    {
+      IQueryable<Animal> query = _db.Animals.AsQueryable();
+      query = query.Where(entry => entry.Species == "cat"); 
+      return await query.ToListAsync();
+    }
+
+    [Route("api/v{version:apiVersion}/StringList")]
+    [ApiVersion("2.0")]
+    [HttpGet]
+      public async Task<List<Animal>> GetV2(string species)
+      {
+        IQueryable<Animal> query = _db.Animals.AsQueryable();
+
+        query = query.Where(entry => entry.Species == "dog"); 
+      return await query.ToListAsync();
+      }
   
 }
 

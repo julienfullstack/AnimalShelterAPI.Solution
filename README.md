@@ -67,7 +67,7 @@ GET /api/v2/stringlist/
 
 ## Known Bugs
 
-* Attempted to implement verisoning, but was unable to get it to work.
+* No known bugs.
 
 ## License
 
