@@ -41,15 +41,7 @@
 * To view all animals, make a GET request to http://localhost:5000/api/animals
 * To view a specific animal, make a GET request to http://localhost:5000/api/animals/{id}
 
-* To use a JSON Web Token, open Postman and create the following POST request: http://localhost:5000/api/users/authenticate
-* Add the following query to the body of the request:
-```json
-{
-    "username": "test",
-    "password": "test"
-}
-```
-* A token will be generated in the response. Copy and paste it as the Token parameter in the Authorization tab. 
+* To view a random animal, make a GET request to http://localhost:5000/api/animals/random 
 
 ## Endpoints
 
@@ -63,6 +55,7 @@ POST /api/animals
 GET /api/animals/{id}
 PUT /api/animals/{id}
 DELETE /api/animals/{id}
+GET /api/animals/random
 ```
 
 
