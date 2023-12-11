@@ -35,6 +35,38 @@
 * _Start the project in development mode with dotnet watch run in the terminal in the "AnimalShelterApi" directory".
 * _Using program of your choice to make API calls, use the domain http://localhost:5000. 
 
+## API Documentation
+
+* Launch the project using dotnet run within the AnimalShelterApi directory, and input the following url: http://localhost:5000/swagger/
+* To view all animals, make a GET request to http://localhost:5000/api/animals
+* To view a specific animal, make a GET request to http://localhost:5000/api/animals/{id}
+
+* To use a JSON Web Token, open Postman and create the following POST request: http://localhost:5000/api/users/authenticate
+* Add the following query to the body of the request:
+```json
+{
+    "username": "test",
+    "password": "test"
+}
+```
+* A token will be generated in the response. Copy and paste it as the Token parameter in the Authorization tab. 
+
+## Endpoints
+
+Base URL: `https://localhost:5000`
+
+### HTTP Request Structure
+
+```
+GET /api/animals
+POST /api/animals
+GET /api/animals/{id}
+PUT /api/animals/{id}
+DELETE /api/animals/{id}
+```
+
+
+
 ## Known Bugs
 
 * _No known bugs_
