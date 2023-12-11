@@ -19,10 +19,10 @@
 #### _An api which calls stores information regarding available cats and dogs to adopt.  _
 
 ## Setup/Installation Requirements
-* _Clone this respository to your desktop_
-* _Navigate to the top level of the directory_
-* _Open in your code editor_
-* _Create a file named "appsettings.json" in the PierresTreats directory with the following code, replacing the "YOUR" statements with applicable information:
+* Clone this respository to your desktop_
+* Navigate to the top level of the directory_
+* Open in your code editor_
+* Create a file named "appsettings.json" in the PierresTreats directory with the following code, replacing the "YOUR" statements with applicable information:
    ```json
     {
       "ConnectionStrings": {
@@ -30,10 +30,10 @@
       }
     }
     ``` 
-* _Create the database using the migrations in the project. Open your shell and run [dotnet ef database update]. 
-* _Within the directory "AnimalShelterApi", run dotnet watch run --launch-profile "AnimalShelterApi-Production" to start the project with a watcher. 
-* _Start the project in development mode with dotnet watch run in the terminal in the "AnimalShelterApi" directory".
-* _Using program of your choice to make API calls, use the domain http://localhost:5000. 
+* Create the database using the migrations in the project. Open your shell and run [dotnet ef database update]. 
+* Within the directory "AnimalShelterApi", run dotnet watch run --launch-profile "AnimalShelterApi-Production" to start the project with a watcher. 
+* Start the project in development mode with dotnet watch run in the terminal in the "AnimalShelterApi" directory".
+* Using program of your choice to make API calls, use the domain http://localhost:5000. 
 
 ## API Documentation
 
