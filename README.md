@@ -43,6 +43,11 @@
 
 * To view a random animal, make a GET request to http://localhost:5000/api/animals/random 
 
+* To view a list of cats, make a GET request to http://localhost:5000/api/v1/stringlist
+
+* To view a list of dogs, make a GET request to http://localhost:5000/api/v2/stringlist
+
+
 ## Endpoints
 
 Base URL: `https://localhost:5000`
@@ -56,13 +61,13 @@ GET /api/animals/{id}
 PUT /api/animals/{id}
 DELETE /api/animals/{id}
 GET /api/animals/random
+GET /api/v1/stringlist
+GET /api/v2/stringlist/
 ```
-
-
 
 ## Known Bugs
 
-* _No known bugs_
+* Attempted to implement verisoning, but was unable to get it to work.
 
 ## License
 

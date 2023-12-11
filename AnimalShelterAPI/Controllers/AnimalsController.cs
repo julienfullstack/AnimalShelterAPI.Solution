@@ -131,6 +131,6 @@ namespace AnimalShelterApi.Controllers
     return animal;
   }
   
-  }
-  
+}
+
 }
